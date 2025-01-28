@@ -9,10 +9,10 @@
 
    - 부모와 자손을 분리하는 요소가 없음
    - 부모 블록에 padding, border, inline content가 없음
-   - 부모의 부모의 margin-bottom과 자손의 margin-bottom을 분리할 height, min-height, max-height가 존재하지 않음음
+   - 부모의 margin-bottom과 자손의 margin-bottom을 분리할 height, min-height, max-height가 존재하지 않음
 
 3. 빈 요소의 상하 마진이 겹치는 경우
-   - padding, border, inline content, height, min-height, max-height가 없으면 블록의 margin-top과 margin-bottom이 더 큰 값으로 상쇄된다.
+   - padding, border, inline content, height, min-height, max-height가 없으면 블록의 margin-top과 margin-bottom 중 더 큰 값으로 상쇄된다.
 
 ## 마진 병합 예외
 
@@ -33,9 +33,9 @@
 
    - 마진 병합현상은 block 요소에만 적용되기 때문이다.
 
-3. 부모 요소에 overflow: hidden;을 적용해준다.
+**3. 부모 요소에 overflow: hidden;을 적용해준다.**
 
-   - overflow:hidden을 사용하면 새롭게 block format context가 만들어지면서 병합되었던 마진 값을 출력해 준다. overflow를 사용한 요소는 내부에 마진을 포함하는 새로운 독립적인 요소가 되기 때문에 마진 병합을 해결할 수 있다.
+- overflow:hidden을 사용하면 새롭게 block format context가 만들어지면서 병합되었던 마진 값을 출력해 준다. overflow를 사용한 요소는 내부에 마진을 포함하는 새로운 독립적인 요소가 되기 때문에 마진 병합을 해결할 수 있다.
 
 4. margin 대신 padding으로 간격을 조정한다.
 
